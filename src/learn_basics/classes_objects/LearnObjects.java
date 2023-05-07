@@ -46,6 +46,8 @@ public class LearnObjects {
         System.out.println(lexus);
         System.out.println(lamborghini);
 
+        Car toyota = new Car();
+        Car honda = new Car("Honda", "Accord");
 
     }
 

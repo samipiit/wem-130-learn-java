@@ -5,6 +5,17 @@ public class Car {
     // The constructors sole purpose is to initialize the object of the class
     // Constructors are implicit to all classes. Each class has its own constructor, whether explicitly declared, or not
     // Once a constructor is explicitly declared, the implicit constructor goes away
+    // Constructors can also be overloaded, just like methods
+
+    public Car() {
+
+    }
+
+    public Car(String manufacturer, String model) {
+        this.manufacturer = manufacturer;
+        this.model = model;
+    }
+
     public Car(String manufacturer, String model, String engine, String transmissionType, int wheelSize, int numOfDoors,
                String color) {
         this.manufacturer = manufacturer;
