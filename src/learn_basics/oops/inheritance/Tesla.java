@@ -1,2 +1,4 @@
-package learn_basics.oops.inheritance;public class Tesla {
+package learn_basics.oops.inheritance;
+
+public class Tesla extends Car {
 }
