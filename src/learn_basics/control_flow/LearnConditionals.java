@@ -7,7 +7,7 @@ public class LearnConditionals {
 //    >= 70 & < 80 -> C
 
     public static void main(String[] args) {
-        if (false) {
+        if (true) {
             System.out.println("Hello, world!");
         } else if (false) {
             System.out.println("Hello, universe!");
@@ -27,8 +27,9 @@ public class LearnConditionals {
         // Assuming age arg is between 1-100
         if (age < 67) {
             return false;
+        } else {
+            return true;
         }
-        return true;
     }
 
     public static String getMonthName(int monthNum) {
@@ -59,34 +60,63 @@ public class LearnConditionals {
 //            return "December";
 //        }
 
+        String monthName;
+
         switch(monthNum) {
             case 1:
+//                monthName = "January";
+//                break;
                 return "January";
             case 2:
+//                monthName = "February";
+//                break;
                 return "February";
             case 3:
+//                monthName = "March";
+//                break;
                 return "March";
             case 4:
+//                monthName = "April";
+//                break;
                 return "April";
             case 5:
+//                monthName = "May";
+//                break;
                 return "May";
             case 6:
+//                monthName = "June";
+//                break;
                 return "June";
             case 7:
+//                monthName = "July";
+//                break;
                 return "July";
             case 8:
+//                monthName = "August";
+//                break;
                 return "August";
             case 9:
+//                monthName = "September";
+//                break;
                 return "September";
             case 10:
+//                monthName = "October";
+//                break;
                 return "October";
             case 11:
+//                monthName = "November";
+//                break;
                 return "November";
             case 12:
+//                monthName = "December";
+//                break;
                 return "December";
             default:
                 return "ENTER A VALID VALUE, IDIOT";
+//                monthName = "";
         }
+
+//        return monthName;
 
     }
 
