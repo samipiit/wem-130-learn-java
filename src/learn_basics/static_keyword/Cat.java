@@ -10,27 +10,27 @@ public class Cat {
 
 
     // Behaviors
-    void eat() {
+    static void eat() {
         System.out.println("Nom, nom, nom");
     }
 
-    void sleep() {
+    static void sleep() {
         System.out.println("Good night");
     }
 
-    void run() {
+    static void run() {
         System.out.println("Running to claw your face off");
     }
 
-    void purr() {
+    static void purr() {
         System.out.println("Purrrrrr");
     }
 
-    void talk() {
+    static void talk() {
         System.out.println("Meow!");
     }
 
-    void crouch() {
+    static void crouch() {
         System.out.println("Hunting for food...");
     }
 

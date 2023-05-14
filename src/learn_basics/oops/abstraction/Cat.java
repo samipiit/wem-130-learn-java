@@ -1,2 +1,7 @@
-package learn_basics.oops.abstraction;public class Cat {
+package learn_basics.oops.abstraction;
+
+public abstract class Cat extends Animal {
+
+
+
 }

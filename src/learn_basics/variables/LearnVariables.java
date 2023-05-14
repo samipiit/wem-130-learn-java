@@ -2,8 +2,8 @@ package learn_basics.variables;
 
 public class LearnVariables {
 
-    String firstName = "Tinhinane";
-    String lastName = "Smith";
+    String firstName = "Tina";
+    String lastName = "Johnson";
 
     public static void main(String[] args) {
         LearnVariables obj = new LearnVariables();
