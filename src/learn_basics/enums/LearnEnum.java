@@ -2,15 +2,27 @@ package learn_basics.enums;
 
 public class LearnEnum {
 
-    static String directionToGo = "NORTH";
-
     public static void main(String[] args) {
-        Direction[] values = Direction.values();
-        for (Direction d : values) {
-            System.out.println(d);
-        }
+        System.out.println(Month.JULY.num);
 
-        System.out.println(Direction.valueOf(directionToGo));
+        System.out.println(determineMonthNumber(Month.FEBRUARY));
+
+    }
+
+    public static int determineMonthNumber(Month month) {
+        switch(month) {
+            case JANUARY:
+                return 1;
+            case FEBRUARY:
+                return 2;
+            case MARCH:
+                return 3;
+            case APRIL:
+                return 4;
+            case MAY:
+                return 5;
+        }
+        return -1;
     }
 
 }
