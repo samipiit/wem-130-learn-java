@@ -1,0 +1,2 @@
+This is a nested try-with-resources block
+It is used to create multiple resources, some of which are dependant on others

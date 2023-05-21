@@ -13,17 +13,12 @@ public class LearnDebugging {
      */
 
     public static void main(String[] args) {
-        int num = 1000;
+        int value = 1;
+        String name = "Sofiane";
 
-        for (int i = 0; i <= num; i++) {
-            System.out.println(i);
-        }
-
-//        String name = "Sofiane";
-//
-//        System.out.println("We are beginning execution of the program");
-//        doSomething(2);
-//        System.out.println("We are done executing the program");
+        System.out.println("We are beginning execution of the program");
+        doSomething(value);
+        System.out.println("We are done executing the program");
     }
 
     static void doSomething(int value) {
