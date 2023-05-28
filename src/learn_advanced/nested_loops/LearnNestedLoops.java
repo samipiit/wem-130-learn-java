@@ -3,7 +3,6 @@ package learn_advanced.nested_loops;
 public class LearnNestedLoops {
 
     public static void main(String[] args) {
-//
 //        for (int h = 0; h <= 12; h++) {
 //            for (int m = 1; m <= 60; m++) {
 //                for (int s = 1; s <= 60; s++) {
@@ -20,8 +19,6 @@ public class LearnNestedLoops {
             }
 
         }
-
-
 
     }
 

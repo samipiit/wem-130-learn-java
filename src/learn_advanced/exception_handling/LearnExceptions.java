@@ -82,6 +82,4 @@ public class LearnExceptions {
                 throw new NoSuchDayException();
         }
     }
-
-
 }
