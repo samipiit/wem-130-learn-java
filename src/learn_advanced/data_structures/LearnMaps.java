@@ -19,7 +19,7 @@ public class LearnDataStructures {
         students.put(3, "Fatma");
         students.put(4, "Salim");
         students.put(5, "Dalal");
-        students.put(5, "Sofiane");
+        students.put(5, "Sofiane"); // Overwriting the key of 5
 
         System.out.println(students.get(5));
 
