@@ -1,4 +1,7 @@
-package group_exercises;
+package learn_advanced.learn_unit_testing;
+
+import org.junit.Assert;
+import org.junit.Test;
 
 public class LeapYear {
 
@@ -33,46 +36,49 @@ public class LeapYear {
             - isLeapYear(2020)  - Returns true
      */
 
+    @Test
+    public void testInvalidMonthInputBoundary(){
+        int actualResult = getDaysInMonth(13, 2022);
 
-    public static void main(String[] args) {
-        int days;
-
-        days = getDaysInMonth(1, 2028); // 31
-        System.out.println(days);
-
-        days = getDaysInMonth(2, 2000); // 29
-        System.out.println(days);
-
-        days = getDaysInMonth(3, 1990); // 31
-        System.out.println(days);
-
-        days = getDaysInMonth(3, 2024); // 31
-        System.out.println(days);
-
-        days = getDaysInMonth(7, 1876); // 31
-        System.out.println(days);
-
-        days = getDaysInMonth(4, 2018); // 30
-        System.out.println(days);
-
-        days = getDaysInMonth(9, 2015); // 30
-        System.out.println(days);
-
-        days = getDaysInMonth(12, 1287); // 31
-        System.out.println(days);
-
-        days = getDaysInMonth(4, 2012); // 30
-        System.out.println(days);
-
-        days = getDaysInMonth(10, -2019); // -1
-        System.out.println(days);
-
-        days = getDaysInMonth(2, 1429); // 28
-        System.out.println(days);
-
+        Assert.assertEquals(-1, actualResult);
     }
 
-    static int getDaysInMonth(int month, int year) {
+    @Test
+    public void testInvalidNegativeMonthInput(){
+        int actualResult = getDaysInMonth(-5, 2022);
+
+        Assert.assertEquals(-1, actualResult);
+    }
+
+    @Test
+    public void testInvalidYearInputBoundary(){
+        int actualResult = getDaysInMonth(4, 10000);
+
+        Assert.assertEquals(-1, actualResult);
+    }
+
+    @Test
+    public void testInvalidNegativeYearInput(){
+        int actualResult = getDaysInMonth(2, -1996);
+
+        Assert.assertEquals(-1, actualResult);
+    }
+
+    @Test
+    public void testLeapYear(){
+        int actualResult = getDaysInMonth(7, 2000);
+
+        Assert.assertEquals(31, actualResult);
+    }
+
+    @Test
+    public void testLeapYearFebruary(){
+        int actualResult = getDaysInMonth(2, 2000);
+
+        Assert.assertEquals(29, actualResult);
+    }
+
+    private static int getDaysInMonth(int month, int year) {
         if (month < 1 || month > 12) {
             return -1;
         }
