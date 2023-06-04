@@ -24,6 +24,7 @@ public class LearnJUnit {
         System.out.println("@AfterClass");
     }
 
+    @Ignore
     @Test
     public void testDivision() {
         System.out.println("Testing Division");
@@ -31,6 +32,7 @@ public class LearnJUnit {
 
     }
 
+    @Ignore
     @Test
     public void testAddition() {
         System.out.println("Testing Addition");
@@ -40,7 +42,7 @@ public class LearnJUnit {
     @Test
     public void testMultiplication() {
         System.out.println("Testing Multiplication");
-        Assert.assertEquals(10, 2 * 5);
+        Assert.assertEquals("Multiplication method is not functioning as expected", 10, 2 * 5);
     }
 
     @Test
