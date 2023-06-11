@@ -54,7 +54,7 @@ public class LearnDrivers {
     }
 
     private static WebDriver getDriver(Browser browser) {
-        switch (browser.browser) {
+        switch (browser.BROWSER) {
             case "firefox" -> {
                 FirefoxOptions options = new FirefoxOptions();
                 options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");

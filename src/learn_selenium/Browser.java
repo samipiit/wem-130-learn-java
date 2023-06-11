@@ -7,10 +7,10 @@ public enum Browser {
     EDGE("edge"),
     SAFARI("safari");
 
-    public String browser;
+    public final String BROWSER;
 
     Browser(String browser) {
-        this.browser = browser;
+        this.BROWSER = browser;
     }
 
 }

@@ -1,8 +1,7 @@
 package learn_selenium.demo_qa;
 
 import learn_selenium.Browser;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,15 +32,25 @@ public class LearnDemoQA {
         9. Validate the full name, email address, current & permanent address in the output
      */
 
-    @Test
-    public void testSubmitContactForm() {
+    @Before
+    public void setUp(){
         driver = getDriver(Browser.CHROME);
         WebDriverWait driverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         driver.get(URL);
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
+    }
 
+    @After
+    public void tearDown(){
+        if (driver != null) {
+            driver.quit();
+        }
+    }
+
+    @Test
+    public void testSubmitContactForm() {
         WebElement elementsButton = driver.findElement(By.xpath("//div[@class='category-cards']/div[1]"));
         elementsButton.click();
 
@@ -71,27 +80,26 @@ public class LearnDemoQA {
         WebElement resultCurrentAddress = driver.findElement(By.xpath("//p[@id='currentAddress']"));
         WebElement resultPermanentAddress = driver.findElement(By.xpath("//p[@id='permanentAddress']"));
 
-        String resultNameText = resultName.getText();
+        String resultNameText = resultName.getAttribute("innerHTML");
         String resultEmailText = resultEmail.getText();
         String resultCurrentAddressText = resultCurrentAddress.getText();
         String resultPermanentAddressText = resultPermanentAddress.getText();
-
-//        Assert.assertTrue(resultNameText.contains(fullName));
-//        Assert.assertTrue(resultEmailText.contains(emailAddress));
-//        Assert.assertTrue(resultCurrentAddressText.contains(address));
-//        Assert.assertTrue(resultPermanentAddressText.contains(address));
 
         Assert.assertEquals(fullName, resultNameText.split(":")[1]);
         Assert.assertEquals(emailAddress, resultEmailText.split(":")[1]);
         Assert.assertEquals(address, resultCurrentAddressText.split(":")[1]);
         Assert.assertEquals(address, resultPermanentAddressText.split(":")[1]);
 
-        driver.quit();
+        // Alternate way to perform this assertion
+//        Assert.assertTrue(resultNameText.contains(fullName));
+//        Assert.assertTrue(resultEmailText.contains(emailAddress));
+//        Assert.assertTrue(resultCurrentAddressText.contains(address));
+//        Assert.assertTrue(resultPermanentAddressText.contains(address));
+
     }
 
-
     private static WebDriver getDriver(Browser browser) {
-        switch (browser.browser) {
+        switch (browser.BROWSER) {
             case "firefox" -> {
                 FirefoxOptions options = new FirefoxOptions();
                 options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
